@@ -1,23 +1,23 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  final pages = [
+    Column(
+      children: [
+        // Flexible(
+        //   child: DashboardView(),
+        // ),
+      ],
+    ),
+    //const LinksView(),
+  ];
+  bottomNav(newIndex) {
+    page.value = newIndex;
+    // log('new index: ${newIndex.toString()}');
+    // log('page value: ${page.value.toString()}');
+    update();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  RxInt page = 0.obs;
 }
