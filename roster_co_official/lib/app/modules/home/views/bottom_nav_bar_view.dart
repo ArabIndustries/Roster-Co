@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:roster_co_official/app/modules/home/controllers/home_controller.dart';
@@ -40,22 +41,47 @@ class BottomNavBarView extends GetView<HomeController> {
               showUnselectedLabels: false,
               items: const [
                 BottomNavigationBarItem(
-                    label: 'Home',
-                    icon: Icon(
-                      FontAwesomeIcons.house,
-                      size: 25,
-                    )),
-                // BottomNavigationBarItem(label: '', icon: SizedBox()),
+                    label: 'Home', icon: FaIcon(FontAwesomeIcons.house)),
                 BottomNavigationBarItem(
-                  label: 'Links',
-                  icon: Icon(
-                    FontAwesomeIcons.link,
-                    size: 25,
-                  ),
-                ),
+                    label: 'Events',
+                    icon: FaIcon(
+                      FontAwesomeIcons.solidBell,
+                    )),
               ],
             ),
           )),
+    );
+  }
+}
+
+class HomeButtonView extends GetView {
+  const HomeButtonView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          gradient: const LinearGradient(
+              colors: [Color(0xff1F7DE5), Color(0xff5DCCFF)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter)),
+      child: TextButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black,
+            shadowColor: Colors.transparent,
+            padding: EdgeInsets.all(8.h),
+            minimumSize: Size.zero,
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10))),
+        child: Icon(
+          Icons.add_rounded,
+          color: Colors.white,
+          size: 40.w,
+        ),
+      ),
     );
   }
 }
