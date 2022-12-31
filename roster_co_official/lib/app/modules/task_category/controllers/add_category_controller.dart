@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:roster_co_official/app/modules/task_category/controllers/task_category_controller.dart';
 
@@ -16,64 +17,6 @@ class AddCategoryController extends GetxController {
   }
 }
 
-class TitlePadding extends GetView {
-  final String title;
-  const TitlePadding({required this.title, Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 8.0),
-      child: CreatePageTitle(title: title),
-    );
-  }
-}
-
-class CreatePageTitle extends GetView {
-  final String title;
-  const CreatePageTitle({Key? key, required this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(
-          fontFamily: 'Metropolis', color: Colors.black, fontSize: 15),
-    );
-  }
-}
-
-final textfieldDeco = InputDecoration(
-    focusedErrorBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: const BorderSide(color: Color(0xffCBCBCB), width: .8),
-    ),
-    errorBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: const BorderSide(color: Color(0xffCBCBCB), width: .8),
-    ),
-    contentPadding: const EdgeInsets.all(19),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: const BorderSide(color: Color(0xffCBCBCB), width: .8),
-    ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: const BorderSide(color: Color(0xffCBCBCB), width: .8),
-    ),
-    hintText: 'Enter here...',
-    hintStyle: const TextStyle(
-      fontFamily: 'Metropolis',
-      color: Color(0xffADADAD),
-    ));
-final btDeco = BoxDecoration(
-  borderRadius: BorderRadius.circular(20),
-  border: Border.all(
-    color: const Color(0xffCBCBCB),
-    width: .8,
-  ),
-);
-
 class CustomBottomSheetText extends GetView {
   final String text;
   const CustomBottomSheetText({required this.text, Key? key}) : super(key: key);
@@ -82,17 +25,14 @@ class CustomBottomSheetText extends GetView {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: const TextStyle(
-          fontFamily: 'Metropolis', color: Colors.black, fontSize: 19),
+      style: TextStyle(
+          fontFamily: 'Metropolis', color: Colors.black, fontSize: 20.sp),
     );
   }
 }
 
-var downIcon = const Icon(
+var downIcon = Icon(
   Icons.keyboard_arrow_down_rounded,
   color: Colors.black,
-  size: 24,
-);
-var sixw_8 = const SizedBox(
-  width: 80,
+  size: 24.w,
 );

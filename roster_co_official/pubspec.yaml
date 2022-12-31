@@ -2,52 +2,54 @@ name: roster_co_official
 version: 1.0.0+1
 publish_to: none
 description: A new Flutter project.
-environment:
-  sdk: ">=2.18.5 <3.0.0"
+environment: 
+  sdk: '>=2.18.5 <3.0.0'
 
-dependencies:
+dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.5
   font_awesome_flutter: 10.3.0
   flutter_screenutil: any
-  flutter:
+  intl: 0.18.0
+  flutter: 
     sdk: flutter
 
-dev_dependencies:
+dev_dependencies: 
   flutter_lints: 2.0.1
-  flutter_test:
+  flutter_test: 
     sdk: flutter
 
-flutter:
-  assets:
+flutter: 
+  assets: 
     - assets/images/
     - assets/icons/
-  fonts:
+  fonts: 
     - family: Metropolis
-      fonts:
+      fonts: 
         - asset: assets/fonts/Metropolis-Bold.otf
     - family: Rancho
-      fonts:
+      fonts: 
         - asset: assets/fonts/Rancho-Regular.ttf
     - family: Indie Flower
-      fonts:
+      fonts: 
         - asset: assets/fonts/IndieFlower-Regular.ttf
     - family: Inter
-      fonts:
+      fonts: 
         - asset: assets/fonts/Inter-Regular.ttf
     - family: Inter Medium
-      fonts:
+      fonts: 
         - asset: assets/fonts/Inter-Medium.ttf
     - family: Urbanist
-      fonts:
+      fonts: 
         - asset: assets/fonts/Urbanist-Bold.ttf
     - family: Metropolis Medium
-      fonts:
+      fonts: 
         - asset: assets/fonts/Metropolis-Medium.otf
     - family: Metropolis Black
-      fonts:
+      fonts: 
         - asset: assets/fonts/Metropolis-Black.otf
     - family: Metropolis Regular
-      fonts:
+      fonts: 
         - asset: assets/fonts/Metropolis-Regular.otf
   uses-material-design: true
+

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:roster_co_official/app/modules/home/controllers/home_controller.dart';
-import 'package:roster_co_official/app/modules/task_category/views/add_task_category_view.dart';
 
 class BottomNavBarView extends GetView<HomeController> {
   const BottomNavBarView({Key? key}) : super(key: key);

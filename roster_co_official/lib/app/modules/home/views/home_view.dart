@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:roster_co_official/app/modules/events/views/add_event_view.dart';
 import 'package:roster_co_official/app/modules/events/views/events_view.dart';
 import 'package:roster_co_official/app/modules/home/controllers/home_controller.dart';
 import 'package:roster_co_official/app/modules/home/views/bottom_nav_bar_view.dart';
@@ -95,11 +96,11 @@ class HomeView extends GetView<HomeController> {
         ),
         child: TextButton(
           onPressed: () {
-            Get.bottomSheet(const AddTaskCategoryView(),
-                isScrollControlled: true);
-            //  (Get.find<HomeController>().page.value == 1)
-            //       ? Get.bottomSheet(AddTaskCategoryView(), isScrollControlled: true)
-            //       : Get.bottomSheet(CreatEventSheet(), isScrollControlled: true);
+            (Get.find<HomeController>().page.value == 0)
+                ? Get.bottomSheet(const AddTaskCategoryView(),
+                    isScrollControlled: true)
+                : Get.bottomSheet(const AddEventView(),
+                    isScrollControlled: true);
           },
           style: ElevatedButton.styleFrom(
               elevation: 5,
